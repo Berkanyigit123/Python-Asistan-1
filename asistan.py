@@ -121,7 +121,7 @@ def response(voice):  # voice ile gelen veriyi sorgululamak için response adın
     if "YouTube'da ara" in voice:  # eğer voice nin içinde arama yap diye bir değer varsa bunları yap
         searchy = record(
             'ne aramamı istersin')  # record ile aranmasını istediğimiz kelimeyi yada cümleyi alıp searchy değişkenine tanımlıyouz
-        urly = 'https://www.youtube.com/results?search_query=' + searchy  # https://google.com/search?q= adresine aldığımız searchy ı ekliyoruz ve urly değişkenine tanımlıyouz
+        urly = 'https://www.youtube.com/results?search_query=' + searchy
         webbrowser.get().open(urly)  # web browserı açıyouz ve  urly değişkenini dönderiyouz
         speak(searchy + ' için bulduğum sonuçlar')  # sesli bir şekilde seslendirme yapıyouz
         print(Fore.GREEN)
